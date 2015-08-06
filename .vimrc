@@ -90,6 +90,9 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 """"""""""""""""""""""""""""""
 
+NeoBundle 'scrooloose/nerdtree'
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
 NeoBundleCheck
 call neobundle#end()
 filetype plugin indent on
