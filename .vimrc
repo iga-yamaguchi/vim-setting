@@ -10,9 +10,9 @@ set autoindent
 set ruler
 set wildmenu
 set wildmode=list,full
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=2
+set shiftwidth=2
+set noexpandtab
 set backspace=indent,eol,start
 " 全角スペースを可視化
 autocmd ColorScheme * hi link TwoByteSpace Error
@@ -20,7 +20,6 @@ autocmd VimEnter,WinEnter * let w:m_tbs = matchadd("TwoByteSpace", '　')
 set t_Co=256
 colorscheme molokai
 
-set ts=2 sw=2 et
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup=1
 " ガイドをスタートするインデントの量
