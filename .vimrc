@@ -10,11 +10,26 @@ set autoindent
 set ruler
 set wildmenu
 set wildmode=list,full
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set backspace=indent,eol,start
+" 全角スペースを可視化
+autocmd ColorScheme * hi link TwoByteSpace Error
+autocmd VimEnter,WinEnter * let w:m_tbs = matchadd("TwoByteSpace", '　')
 set t_Co=256
 colorscheme molokai
+
+set ts=2 sw=2 et
+" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+let g:indent_guides_enable_on_vim_startup=1
+" ガイドをスタートするインデントの量
+let g:indent_guides_start_level=1
+" 自動カラーを無効にする
+let g:indent_guides_auto_colors=0
+autocmd VimEnter,Colorscheme * : highlight IndentGuidesEven  ctermbg=234
+" あんたーラインを引く
+autocmd VimEnter,ColorScheme * : highlight CursorLine cterm=underline ctermbg=234
 
 
 if has('vim_starting')
@@ -30,6 +45,7 @@ let g:neobundle_default_git_protocol='https'
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'make -f make_mingw32.mak',
