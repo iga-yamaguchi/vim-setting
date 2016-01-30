@@ -53,6 +53,10 @@ NeoBundle 'Shougo/vimproc', {
   \     'unix' : 'make -f make_unix.mak',
   \    },
   \ }
+" emmet
+NeoBundle 'mattn/emmet-vim'
+" 特定文字列で囲む
+NeoBundle 'tpope/vim-surround'
 
 if has('lua')
 	  NeoBundleLazy 'Shougo/neocomplete.vim', {
