@@ -58,6 +58,13 @@ NeoBundle 'mattn/emmet-vim'
 " 特定文字列で囲む
 NeoBundle 'tpope/vim-surround'
 
+" HTML5対応
+"NeoBundle 'othree/html5.vim'
+
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
+"NeoBundle 'taichouchou2/vim-javascript'
+
 if has('lua')
 	  NeoBundleLazy 'Shougo/neocomplete.vim', {
 		    \ 'depends' : 'Shougo/vimproc',
